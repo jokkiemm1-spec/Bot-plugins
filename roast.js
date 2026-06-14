@@ -1,4 +1,4 @@
-async function roast(m, { text, conn, usedPrefix, command }) {
+let handler = async (m, { text, conn, usedPrefix, command }) => {
     try {
         await m.reply("Wait make I load am...");
 
@@ -34,8 +34,8 @@ async function roast(m, { text, conn, usedPrefix, command }) {
     }
 }
 
-roast.command = /^roast$/i
-roast.help = ['roast @user']
-roast.tags = ['fun']
+handler.command = ['roast']
+handler.help = ['roast @user']
+handler.tags = ['fun']
 
-module.exports = roast
+module.exports = handler
